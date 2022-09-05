@@ -9,9 +9,11 @@
     height: 100vh;
     position: fixed;
     top: 0;
-    right: 20vh;
+    left: 70vw;
 }
-
+.pop_up{
+    background-color: #27ae60;
+}
 
 
 

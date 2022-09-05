@@ -1,14 +1,15 @@
-// u= document.getElementById("b1").style.setProperty("left", "100px");
-user_Boat = document.getElementsByClassName("boat1");
-bot1 = document.getElementsByClassName("boat2");
-bot2 = document.getElementsByClassName("boat3");
-bot3 = document.getElementsByClassName("boat4");
 
-// user_Boat_Position=document.getElementById("b1").style['left'];
+
+final_Position=document.getElementById("vl").style.setProperty("left","70vw");
+document.getElementById("button").style.setProperty("display", "none");
+final_Position=document.getElementById("vl").style["left"]
 user_Boat_Position=0;
+bot1_Position=0;
+bot2_Position=0;
+bot3_Position=0;
 
-console.log();
-
+win=0;
+console.log(final_Position);
 
 function whenPress(){
     user_Boat_Position-=1
@@ -21,4 +22,68 @@ function whenReleased(){
     document.getElementById("b1").style.setProperty("left", user_Boat_Position+"px");
     console.log("released  "+user_Boat_Position);
 
+}
+
+function bot1WhenPress(i){
+    bot1_Position-=i
+    document.getElementById("b2").style.setProperty("left", bot1_Position+"px");
+}
+function bot1WhenReleased(i){
+    bot1_Position+=i
+    document.getElementById("b2").style.setProperty("left", bot1_Position+"px");
+}
+
+function bot2WhenPress(i){
+    bot2_Position-=i
+    document.getElementById("b3").style.setProperty("left", bot2_Position+"px");
+}
+function bot2WhenReleased(i){
+    bot2_Position+=i
+    document.getElementById("b3").style.setProperty("left", bot2_Position+"px");
+}
+
+
+function bot3WhenPress(i){
+    bot3_Position-=i
+    document.getElementById("b4").style.setProperty("left", bot3_Position+"px");
+}
+function bot3WhenReleased(i){
+    bot3_Position+=i
+    document.getElementById("b4").style.setProperty("left", bot3_Position+"px");
+}
+
+function activate_Bots(){
+    
+    //! Bot1
+    setInterval(()=>{
+        ran1=Math.random() * 2
+        ran2=Math.random() * 3
+        bot1WhenPress(ran1)
+        bot1WhenReleased(ran2)
+    }, 100);
+    
+    
+    
+    //! Bot2
+    setInterval(()=>{
+        ran1=Math.random() * 2
+        ran2=Math.random() * 3
+        bot2WhenPress(ran1)
+        bot2WhenReleased(ran2)
+    }, 100);
+    
+    
+    //! Bot3
+    setInterval(()=>{
+        ran1=Math.random() * 2
+        ran2=Math.random() * 3
+        bot3WhenPress(ran1)
+        bot3WhenReleased(ran2)
+    }, 100);
+
+}
+function startGame(){
+    activate_Bots()
+    document.getElementById("pop_up").style.setProperty("display", "none");
+    document.getElementById("button").style.setProperty("display", "unset");
 }
