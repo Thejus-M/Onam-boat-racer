@@ -13,7 +13,7 @@ final_Position = 700;
 
 function whenPress() {
    if (user_Boat_Position < final_Position && win == 0) {
-      user_Boat_Position -= 1;
+      user_Boat_Position -= 2;
       document
          .getElementById("b1")
          .style.setProperty("left", user_Boat_Position + "px");
@@ -29,7 +29,7 @@ function whenPress() {
 
 function whenReleased() {
    if (user_Boat_Position < final_Position && win == 0) {
-      user_Boat_Position += 2;
+      user_Boat_Position += 4;
       document
          .getElementById("b1")
          .style.setProperty("left", user_Boat_Position + "px");
