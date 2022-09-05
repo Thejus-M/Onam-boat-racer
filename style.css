@@ -12,9 +12,26 @@
     left: 70vw;
 }
 .pop_up{
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #27ae60;
 }
-
+button{
+    padding: 5px;
+    border-radius: 8px;
+}
 
 
 
